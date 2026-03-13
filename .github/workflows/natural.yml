@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  sideways:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        species: ["extreme", "absorb", "dispute", "postage", "screen"]
+        sometime: ["sentence", "increase", "fate", "aeroplane"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar kl
